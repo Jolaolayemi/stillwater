@@ -1,0 +1,1 @@
+GSAP 3.15.0 (gsap, ScrollTrigger, SplitText) by GreenSock, https://gsap.com — free under the GSAP Standard License (https://gsap.com/standard-license). Self-hosted, unmodified, from the npm package.
