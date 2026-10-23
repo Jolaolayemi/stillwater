@@ -118,6 +118,14 @@ node --test                   # runs the checks in test/
 
 The mobile frames are plain HTML at 390×844; open any file in `mobile/frames/` in a browser, or export them at 2x for 780×1688 PNGs.
 
+## Deploy on Vercel (or a custom domain)
+
+The deployable site is the `site/` folder, and its pages link to each other with root paths (`/assets/…`, `/landing/`, `/app/swap/`), so the host has to serve `site/` as the web root.
+
+- **Vercel:** import the repo and deploy with the default settings. The included `vercel.json` tells Vercel there is no build step and to serve `site/`, so `/`, `/landing/` and every `/app/…` page work. Add your own domain under Project → Settings → Domains.
+- **Alternative:** set Project → Settings → Build and Deployment → Root Directory to `site` in Vercel; it does the same job.
+- **Other hosts** (Netlify, Cloudflare Pages and the like): set the publish or output directory to `site`. Serve it at the root of a domain or subdomain, not under a sub-path.
+
 ## Project structure
 
 ```
