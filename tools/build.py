@@ -832,14 +832,14 @@ SCREENS = [
 ]
 def page_index():
     cards = ''.join(f"""<article class="idx-card key" data-glow><span class="eyebrow">{k+1:02d}</span><h3>{t}</h3><p>{d}</p>
-      <div class="links"><a href="{u}" data-roll><span class="lbl-roll">Open</span></a><a class="sec" href="{u}?figma=1">Figma import link</a><span class="mono muted" style="font-size:11px">{u}</span></div></article>""" for k,(t,d,u) in enumerate(SCREENS))
+      <div class="links"><a href="{u}" data-roll><span class="lbl-roll">Open</span></a><span class="mono muted" style="font-size:11px">{u}</span></div></article>""" for k,(t,d,u) in enumerate(SCREENS))
     html = head('Stillwater — all screens', 'Every Stillwater screen: landing, sign-up and login, swap, stake, portfolio, connect wallet and success states. Demo DeFi swap and stake app, designed by Olayemi.') + f"""<body>
 <div class="page-water" data-water aria-hidden="true"></div>
 <header class="site-nav"><div class="bar"><div class="left">{brand()}</div><div class="right"><a class="btn btn-primary" href="/landing/" data-roll><span class="lbl-roll">View landing</span></a></div></div></header>
 <main class="idx" id="main"><div class="wrap">
   <span class="eyebrow">Screens · Designed by Olayemi</span>
   <h1 data-reveal style="margin-top:16px">Stillwater screens</h1>
-  <p class="ash" style="max-width:640px;font-size:17px;margin:16px 0 0">Each screen has its own URL so it can be imported one at a time. Every page is responsive: import at 1440 for desktop and 390 for mobile. The “Figma import link” turns all motion off so the final state imports cleanly.</p>
+  <p class="ash" style="max-width:640px;font-size:17px;margin:16px 0 0">Each screen has its own URL so it can be imported one at a time. Every page is responsive: import at 1440 for desktop and 390 for mobile.</p>
   <div class="idx-grid">{cards}</div>
   <div class="foot-note" style="margin-top:64px"><span class="muted" style="font-size:13px">Style inspired by Raycast's design language. Motion inspired by Visuvate. No assets copied.</span>{DEMO_TAG}</div>
 </div></main>
